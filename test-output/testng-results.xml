@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-01-16T11:13:16 IST" name="Default suite" finished-at="2021-01-16T11:13:26 IST" duration-ms="10184">
+    <groups>
+    </groups>
+    <test started-at="2021-01-16T11:13:16 IST" name="Default test" finished-at="2021-01-16T11:13:26 IST" duration-ms="10184">
+      <class name="com.orangehrm.tests.LoginTest">
+        <test-method is-config="true" signature="intialize()[pri:0, instance:com.orangehrm.tests.LoginTest@3f56875e]" started-at="2021-01-16T11:13:16 IST" name="intialize" finished-at="2021-01-16T11:13:16 IST" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intialize -->
+        <test-method is-config="true" signature="browser()[pri:0, instance:com.orangehrm.tests.LoginTest@3f56875e]" started-at="2021-01-16T11:13:16 IST" name="browser" finished-at="2021-01-16T11:13:21 IST" duration-ms="4581" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browser -->
+        <test-method is-config="true" signature="openApplication()[pri:0, instance:com.orangehrm.tests.LoginTest@3f56875e]" started-at="2021-01-16T11:13:21 IST" name="openApplication" finished-at="2021-01-16T11:13:25 IST" depends-on-methods="com.orangehrm.globaltest.BaseTest.browser" duration-ms="3964" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApplication -->
+        <test-method signature="VerifyLoginWithValidCredentials()[pri:0, instance:com.orangehrm.tests.LoginTest@3f56875e]" started-at="2021-01-16T11:13:25 IST" name="VerifyLoginWithValidCredentials" finished-at="2021-01-16T11:13:26 IST" duration-ms="1591" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyLoginWithValidCredentials -->
+      </class> <!-- com.orangehrm.tests.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
