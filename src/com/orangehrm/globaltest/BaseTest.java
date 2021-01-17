@@ -1,11 +1,13 @@
 package com.orangehrm.globaltest;
 
 import java.io.IOException;
+
 import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import com.orangehrm.utilities.PropertyUtil;
@@ -18,7 +20,7 @@ public class BaseTest {
 	public void intialize() throws IOException {
 		PropertyUtil.initializePropert();
 	}
-	@BeforeMethod
+	
 	public void browser() throws IOException {
 		String browser = PropertyUtil.readProperty("browser");
 		if(browser.equals("chrome")) {
@@ -33,11 +35,15 @@ public class BaseTest {
 		driver.manage().timeouts().implicitlyWait(Long.parseLong(PropertyUtil.readProperty("implicittime")), TimeUnit.SECONDS);
 		}
 	
-	@BeforeMethod(dependsOnMethods="browser")
-	public void openApplication() throws IOException {
-		
+	
+	public void openApplication() throws IOException {	
 		driver.get(PropertyUtil.readProperty("url"));
 	}
+	
+	public void adminPage() {
+		driver.findElement(By.id("menu_admin_viewAdminModule")).click();
+	}
+	
 	public void closeBrowser() {
 		driver.close();
 	}
